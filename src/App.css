@@ -1,25 +1,168 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', serif;
+}
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  height: 70px;
+}
+
+.justGivingLogo {
+  padding-top: 15px;
+  width: 130px;
+}
+
+.imageStrip {
+  background: url("https://www.bhf.org.uk/-/media/images/banners/christmas-2016-jack-opt.jpg");
+  background-size: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+}
+
+.imageStripContainer {
+  padding-top: 40px;
+}
+
+.heading {
+  margin: 0;
+  color: #fff;
+  padding-bottom: 5px;
+}
+
+.headingWrapper {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.britishHeartFoundationLogo {
+  width: 70px;
+}
+
+.middleSection {
+  background-color: #f8f8f8;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.strapLineHeading {
+  margin: 0;
+  color: #3d3d3d;
+}
+
+.strapLine {
+  width: 70%;
+  color: #a0a0a0;
+}
+
+.link {
+  text-decoration: none;
+  padding-right: 40px;
+  padding-left: 5px;
+  color: #b5b5b5;
+}
+
+.material-icons {
+  color: #b5b5b5;
+  vertical-align: top;
+}
+
+.buttonContainer {
+  padding-top: 2em;
+}
+
+.donateButton {
+  background-color: #8c2d80;
+  color: #fff;
+  display: inline-block;
+  border: 1px solid #8c2d80;
+  margin-right: 1.5em;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  width: 130px;
   text-align: center;
-  background-color: red;
+  border-radius: 35px;
+  cursor: pointer;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.fundraiseButton {
+  color: #8c2d80;
+  border: 1px solid #8c2d80;
+  display: inline-block;
+  margin-right: 1.5em;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  width: 130px;
+  text-align: center;
+  border-radius: 35px;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.donationsContainer {
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
-.App-intro {
-  font-size: large;
+.donation {
+  padding-top: 2em;
+  width: 460px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.donation hr {
+  border: 1px solid #f4f4f4;
+}
+
+.donationAvatar {
+  border-radius: 100%;
+  margin-bottom: 1em;
+  width: 65px;
+}
+
+.donationContents {
+  display: inline-block;
+  width: 350px;
+  margin-left: 2em;
+}
+
+.donarName {
+  display: inline-block;
+}
+
+.donarAmount {
+  display: inline-block;
+  float: right;
+  color: #8c2d80;
+}
+
+.donarDescription {
+  color: #b5b5b5;
+  margin-top: 0;
+}
+
+.footer {
+  height: 140px;
+  background-color: #8c2d80;
+}
+
+@media screen and (max-width: 1024px) {
+  .donation {
+    width: 100%;
+  }
+  .donationContents {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .strapLine {
+    width: 100%;
+  }
 }
