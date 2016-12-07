@@ -36,7 +36,9 @@ class App extends Component {
       )
     } else {
       return (
-        <Donation donations={this.state.donations}/>
+        <div>
+          <Donation donations={this.state.donations}/>
+        </div>
       )
     }
   }
@@ -59,14 +61,14 @@ class App extends Component {
               <h1 className="heading">Foundation</h1>
             </div>
             <h4 className="heading">We power research into heart diease to</h4>
-            <h4 className="heading">beat the UK's single biggest killer</h4>
+            <h4 className="heading">beat the UK’s single biggest killer</h4>
           </div>
         </div>
 
         <div className="middleSection">
           <div className="container">
             <h2 className="strapLineHeading">Join the British Heart Foundation community</h2>
-            <p className="strapLine">Coronary heart disease is the UK's single biggest killer but we are leading the fight against it. Your donations power our life-saving research. Help us keep more families together. Join our fight for every heartbeat.</p>
+            <p className="strapLine">Coronary heart disease is the UK’s single biggest killer but we are leading the fight against it. Your donations power our life-saving research. Help us keep more families together. Join our fight for every heartbeat.</p>
             <i className="material-icons">link</i><a className="link" href="https://www.bhf.org.uk/">website</a>
             <i className="material-icons">link</i><a className="link" href="https://www.bhf.org.uk/about-us/contact-us">contact</a>
             <div className="buttonContainer">
@@ -86,7 +88,7 @@ class App extends Component {
             <p className="exampleDonation">£10</p>
             <p className="exampleDonationDescription">could pay for all the test-tubes, glassware, pipette tips and gloves</p>
             <p className="exampleDonation">£15</p>
-            <p className="exampleDonationDescription">could help to fund a full day's BHF Heart Nursing care.</p>
+            <p className="exampleDonationDescription">could help to fund a full day’s BHF Heart Nursing care.</p>
           </div>
         </div>
 

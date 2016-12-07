@@ -4,7 +4,11 @@ import './App.css';
 class Donation extends Component {
 
   formatCurrency(amount) {
-    return "£" + amount.toFixed(2);
+    if(amount){
+      return "£" + amount.toFixed(2);
+    } else {
+      return "";
+    }
   }
 
   render() {
