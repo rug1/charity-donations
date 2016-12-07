@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.8.1"
+    "istanbul": "^0.4.5",
+    "react-scripts": "0.8.1",
+    "tape": "^4.6.3"
   },
   "dependencies": {
     "async": "^2.1.4",
@@ -15,8 +17,8 @@
   "scripts": {
     "react:start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "test": "tape ./lib/test.js",
+    "coverage": "istanbul cover tape ./lib/test.js",
     "start": "node lib/start.js"
   }
 }
