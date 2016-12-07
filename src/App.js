@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import logo from './logo.svg';
+import Donation from './Donation';
 import './App.css';
 
 class App extends Component {
@@ -9,7 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       charity: "",
-      donations: ""
+      donations: "Getting donations..."
     };
   }
 
@@ -17,15 +18,28 @@ class App extends Component {
     var that = this;
     axios.get('/get-data')
     .then(function (response) {
-      console.log("response",response);
       that.setState({
         donations: response.data.donations,
         charity: response.data.charity
       })
     })
     .catch(function (error) {
-      console.log(error);
+      that.setState({
+        donations: "Donations currently unavailable"
+      })
     });
+  }
+
+  renderDonations(){
+    if (typeof this.state.donations === "string"){
+      return (
+        <p className="gettingDonations">{this.state.donations}</p>
+      )
+    } else {
+      return (
+        <Donation donations={this.state.donations}/>
+      )
+    }
   }
 
   render() {
@@ -66,44 +80,7 @@ class App extends Component {
         <div className="container">
           <div className="donationsContainer">
             <h2 className="strapLineHeading">Donations</h2>
-
-            <div className="donation">
-              <img className="donationAvatar" src="https://www.justgiving.com/content/images/graphics/icons/avatars/facebook-avatar.gif"></img>
-              <div className="donationContents">
-                <p className="donarName"><b>Ruth Uwemedimo</b></p>
-                <p className="donarAmount">£5.00 + £1.25 Gift Aid</p>
-                <p className="donarDescription">Just a little donation in memory of my uncle Shawn,  instead of sending Christmas cards to people this year</p>
-              </div>
-              <hr></hr>
-            </div>
-            <div className="donation">
-              <img className="donationAvatar" src="https://www.justgiving.com/content/images/graphics/icons/avatars/facebook-avatar.gif"></img>
-              <div className="donationContents">
-                <p className="donarName"><b>Ruth Uwemedimo</b></p>
-                <p className="donarAmount">£5.00 + £1.25 Gift Aid</p>
-                <p className="donarDescription">Just a little donation in memory of my uncle Shawn,  instead of sending Christmas cards to people this year</p>
-              </div>
-              <hr></hr>
-            </div>
-            <div className="donation">
-              <img className="donationAvatar" src="https://www.justgiving.com/content/images/graphics/icons/avatars/facebook-avatar.gif"></img>
-              <div className="donationContents">
-                <p className="donarName"><b>Ruth Uwemedimo</b></p>
-                <p className="donarAmount">£5.00 + £1.25 Gift Aid</p>
-                <p className="donarDescription">Just a little donation in memory of my uncle Shawn,  instead of sending Christmas cards to people this year</p>
-              </div>
-              <hr></hr>
-            </div>
-            <div className="donation">
-              <img className="donationAvatar" src="https://www.justgiving.com/content/images/graphics/icons/avatars/facebook-avatar.gif"></img>
-              <div className="donationContents">
-                <p className="donarName"><b>Ruth Uwemedimo</b></p>
-                <p className="donarAmount">£5.00 + £1.25 Gift Aid</p>
-                <p className="donarDescription">Just a little donation in memory of my uncle Shawn,  instead of sending Christmas cards to people this year</p>
-              </div>
-              <hr></hr>
-            </div>
-
+            {this.renderDonations()}
           </div>
         </div>
 

@@ -28,7 +28,7 @@ body {
 }
 
 .imageStripContainer {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .heading {
@@ -67,6 +67,7 @@ body {
   padding-right: 40px;
   padding-left: 5px;
   color: #b5b5b5;
+  vertical-align: baseline;
 }
 
 .material-icons {
@@ -117,11 +118,11 @@ body {
 
 .donation hr {
   border: 1px solid #f4f4f4;
+  margin-top: 2em;
 }
 
 .donationAvatar {
   border-radius: 100%;
-  margin-bottom: 1em;
   width: 65px;
 }
 
@@ -146,6 +147,10 @@ body {
   margin-top: 0;
 }
 
+.gettingDonations {
+  color: #a0a0a0;
+}
+
 .footer {
   height: 140px;
   background-color: #8c2d80;
@@ -164,5 +169,24 @@ body {
 @media screen and (max-width: 736px) {
   .strapLine {
     width: 100%;
+  }
+  .imageStrip {
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 698px) {
+  body {
+    font-size: 0.7em;
+  }
+  .imageStrip {
+    background-size: 100vh;
+    height: 280px;
+  }
+  .imageStripContainer {
+    font-size: 0.7em;
+  }
+  .britishHeartFoundationLogo {
+    width: 50px;
   }
 }
