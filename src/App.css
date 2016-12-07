@@ -109,6 +109,8 @@ body {
 .donationsContainer {
   padding-top: 4em;
   padding-bottom: 4em;
+  width: 60%;
+  display: inline-block;
 }
 
 .donation {
@@ -151,6 +153,31 @@ body {
   color: #a0a0a0;
 }
 
+.rightSection {
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+  padding-top: 2em;
+}
+
+.exampleDonation {
+  margin-left: 3em;
+  font-size: 2em;
+  text-align: center;
+  color: #8c2d80;
+  width: 250px;
+  margin-bottom: 0;
+  margin-top: 2.5em;
+}
+
+.exampleDonationDescription {
+  margin-left: 6em;
+  color: #b5b5b5;
+  width: 250px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
 .footer {
   height: 140px;
   background-color: #8c2d80;
@@ -163,6 +190,12 @@ body {
   .donationContents {
     width: 100%;
     margin-left: 0;
+  }
+  .rightSection {
+    display: none;
+  }
+  .donationsContainer {
+    width: 100%;
   }
 }
 
