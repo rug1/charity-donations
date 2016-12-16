@@ -3,6 +3,8 @@
 To run the application:
 ```
 git clone https://github.com/rug1/charity-donations.git
+cd charity-donations
+npm i
 npm run build
 npm start
 ```
