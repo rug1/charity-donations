@@ -1,6 +1,6 @@
 ## Charity Donations
 
-To run the application:
+To run the application, in your terminal window type:
 ```
 git clone https://github.com/rug1/charity-donations.git
 cd charity-donations
