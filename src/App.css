@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Lato', serif;
+  font-family: "Lato", serif;
 }
 
 .container {
@@ -84,26 +84,38 @@ body {
   color: #fff;
   display: inline-block;
   border: 1px solid #8c2d80;
-  margin-right: 1.5em;
   padding-top: 5px;
   padding-bottom: 8px;
   width: 130px;
   text-align: center;
   border-radius: 35px;
-  /*cursor: pointer;*/
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.donateInput {
+  width: 130px;
+  border-radius: 4px;
+  display: block;
+  border: 1px solid grey;
+  height: 32px;
+  font-size: 16px;
+  margin-bottom: 1em;
+  padding: 5px;
+  margin-top: 5.5em;
 }
 
 .fundraiseButton {
   color: #8c2d80;
   border: 1px solid #8c2d80;
   display: inline-block;
-  margin-right: 1.5em;
+  margin-left: 1.5em;
   padding-top: 5px;
   padding-bottom: 8px;
   width: 130px;
   text-align: center;
   border-radius: 35px;
-  /*cursor: pointer;*/
+  cursor: pointer;
 }
 
 .donationsContainer {
@@ -158,10 +170,10 @@ body {
   width: 40%;
   vertical-align: top;
   padding-top: 2em;
+  text-align: -webkit-center;
 }
 
 .exampleDonation {
-  margin-left: 3em;
   font-size: 2em;
   text-align: center;
   color: #8c2d80;
@@ -171,7 +183,6 @@ body {
 }
 
 .exampleDonationDescription {
-  margin-left: 6em;
   color: #b5b5b5;
   width: 250px;
   text-align: center;
@@ -192,7 +203,9 @@ body {
     margin-left: 0;
   }
   .rightSection {
-    display: none;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 4em;
   }
   .donationsContainer {
     width: 100%;
